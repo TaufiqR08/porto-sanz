@@ -33,7 +33,7 @@ const PortfolioApp = () => {
 
   // --- DATA SAMPEL (GANTI BAGIAN INI DENGAN DATA ASLI ANDA) ---
   const personalInfo = {
-    name: "Fariswan",
+    name: "Sanz",
     role: "Visual Designer & Video Editor",
     bio: "Saya membantu brand menceritakan kisah mereka melalui desain visual yang memukau dan editing video yang dinamis. Berpengalaman lebih dari 5 tahun menggunakan Adobe Creative Suite.",
     email: "Fariswan1140@gmia.com",
