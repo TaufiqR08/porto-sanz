@@ -54,7 +54,7 @@ const PortfolioApp = () => {
     name: "Sanz",
     role: "Visual Designer & Video Editor",
     bio: "Saya membantu brand menceritakan kisah mereka melalui desain visual yang memukau dan editing video yang dinamis. Berpengalaman lebih dari 5 tahun menggunakan Adobe Creative Suite.",
-    email: "Fariswan1140@gmia.com",
+    email: "Fariswan1140@gmail.com",
     phone: "0813-7362-6429",
     photo: "https://placehold.co/400x400/4f46e5/ffffff?text=Fariswan",
     socials: {
@@ -154,11 +154,21 @@ const PortfolioApp = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
-        {/* Background Gradients & Shapes */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow delay-500"></div>
-        <div className="absolute top-1/4 right-1/4 w-24 h-24 border border-indigo-500/20 rounded-full animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-32 h-32 border border-cyan-500/10 rounded-lg animate-float delay-300 rotate-12"></div>
+        
+        {/* Animated Mesh Gradient Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Main Blobs */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-600/20 rounded-full blur-[120px] animate-mesh-1"></div>
+          <div className="absolute bottom-[0%] right-[-5%] w-[45%] h-[45%] bg-cyan-600/20 rounded-full blur-[120px] animate-mesh-2"></div>
+          <div className="absolute top-[20%] right-[10%] w-[35%] h-[35%] bg-blue-600/15 rounded-full blur-[140px] animate-mesh-3"></div>
+          
+          {/* Accent Shapes */}
+          <div className="absolute top-1/4 right-1/4 w-24 h-24 border border-indigo-500/20 rounded-full animate-float"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-32 h-32 border border-cyan-500/10 rounded-lg animate-float delay-300 rotate-12"></div>
+          
+          {/* Noise/Texture Overlay (Optional but premium) */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+        </div>
 
         <div className="container mx-auto px-6 text-center z-10">
           <div className="inline-block px-4 py-1.5 mb-6 border border-slate-700 rounded-full bg-slate-800/50 backdrop-blur-sm text-sm text-indigo-300 opacity-0 animate-fadeInUp">
