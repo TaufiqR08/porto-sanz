@@ -6,6 +6,7 @@ import {
   Mail, 
   Share2, 
   Aperture, 
+  Instagram,
   ExternalLink, 
   Play, 
   Menu, 
@@ -329,17 +330,17 @@ const PortfolioApp = () => {
                     </div>
                     <span>{personalInfo.email}</span>
                   </div>
-                  <div className="flex items-center gap-4 text-slate-300">
+                  {/* <div className="flex items-center gap-4 text-slate-300">
                     <div className="w-10 h-10 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400">
                       <Share2 size={20} />
                     </div>
                     <span>/in/alexkreatif</span>
-                  </div>
+                  </div> */}
                   <div className="flex items-center gap-4 text-slate-300">
                     <div className="w-10 h-10 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-                      <Aperture size={20} />
+                      <Instagram size={20} />
                     </div>
-                    <span>@alexkreatif_design</span>
+                    <span>@{personalInfo.socials.instagram}</span>
                   </div>
                 </div>
               </div>
