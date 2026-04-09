@@ -137,30 +137,35 @@ const PortfolioApp = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
-        {/* Background Gradients */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse delay-1000"></div>
+        {/* Background Gradients & Shapes */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow delay-500"></div>
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 border border-indigo-500/20 rounded-full animate-float"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-32 h-32 border border-cyan-500/10 rounded-lg animate-float delay-300 rotate-12"></div>
 
         <div className="container mx-auto px-6 text-center z-10">
-          <div className="inline-block px-4 py-1.5 mb-6 border border-slate-700 rounded-full bg-slate-800/50 backdrop-blur-sm text-sm text-indigo-300">
+          <div className="inline-block px-4 py-1.5 mb-6 border border-slate-700 rounded-full bg-slate-800/50 backdrop-blur-sm text-sm text-indigo-300 opacity-0 animate-fadeInUp">
             👋 Selamat datang di portofolio saya
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight opacity-0 animate-fadeInUp delay-100">
             Menciptakan <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Visual</span> <br/>
             Yang Bercerita
           </h1>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-10 text-left">
-            <img src={personalInfo.photo} alt="Foto Profil" className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-indigo-500/30 object-cover shadow-xl" />
-            <p className="text-lg md:text-xl text-slate-400 max-w-xl text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-10 text-left opacity-0 animate-fadeInUp delay-200">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+              <img src={personalInfo.photo} alt="Foto Profil" className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-slate-800 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <p className="text-lg md:text-xl text-slate-400 max-w-xl text-center md:text-left leading-relaxed">
               {personalInfo.bio}
             </p>
           </div>
-          <div className="flex flex-col md:flex-row justify-center gap-4">
-            <a href="#portfolio" className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full font-semibold transition-all shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2">
-              <Monitor size={20} /> Lihat Karya
+          <div className="flex flex-col md:flex-row justify-center gap-4 opacity-0 animate-fadeInUp delay-300">
+            <a href="#portfolio" className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full font-semibold transition-all shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2 group">
+              <Monitor size={20} className="group-hover:rotate-12 transition-transform" /> Lihat Karya
             </a>
-            <a href="#contact" className="px-8 py-3 bg-transparent border border-slate-600 hover:border-white hover:bg-white/5 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
-              <Mail size={20} /> Hubungi Saya
+            <a href="#contact" className="px-8 py-3 bg-transparent border border-slate-600 hover:border-white hover:bg-white/5 rounded-full font-semibold transition-all flex items-center justify-center gap-2 group">
+              <Mail size={20} className="group-hover:-translate-y-1 transition-transform" /> Hubungi Saya
             </a>
           </div>
         </div>
